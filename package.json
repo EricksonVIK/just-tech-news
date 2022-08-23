@@ -1,0 +1,25 @@
+{
+  "name": "just-tech-news",
+  "version": "1.0.0",
+  "description": "Mod 13",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricksonVIK/just-tech-news.git"
+  },
+  "author": "EricksonVIK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricksonVIK/just-tech-news/issues"
+  },
+  "homepage": "https://github.com/EricksonVIK/just-tech-news#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.4"
+  }
+}
