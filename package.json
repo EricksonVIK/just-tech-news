@@ -4,7 +4,9 @@
   "description": "Mod 13",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node server.js",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
     "express": "^4.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.4"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }
