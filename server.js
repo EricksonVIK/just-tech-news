@@ -2,7 +2,7 @@ const express = require("express");
 
 const routes = require("./routes");
 
-const sequalize = require("./config/connection");
+const sequelize = require("./config/connection");
 
 const app = express();
 
@@ -16,6 +16,6 @@ app.use(routes);
 
 // turn on connection to db and server
 // sync means that this is a sequalize taking the models and connecting them to associated database tables.
-sequalize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now Listening on ${PORT}`));
 });
