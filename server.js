@@ -1,8 +1,14 @@
-const express = require("express");
+const path = require('path');
 
-const routes = require("./routes");
+const express = require('express');
 
-const sequelize = require("./config/connection");
+// after npm install express-handlebars
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({})
+
+const routes = require('./controllers');
+
+const sequelize = require('./config/connection');
 
 const app = express();
 
@@ -10,6 +16,11 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// express.static -- middleware takes all content in folder and serve as static assets
+app.use(express.static(path.join(__dirname, 'public')));
+// express handlebars
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 // turn on routes
 app.use(routes);
