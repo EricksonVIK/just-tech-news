@@ -4,7 +4,7 @@
   "description": "Mod 13",
   "main": "server.js",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "start": "node server.js",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
@@ -30,6 +30,7 @@
     "sequelize": "^6.21.4"
   },
   "devDependencies": {
+    "jest": "^29.0.3",
     "prettier": "2.7.1"
   }
 }

@@ -2,9 +2,11 @@ const path = require('path');
 
 const express = require('express');
 
+const helpers = require('./utils/heplers');
+
 // after npm install express-handlebars
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({})
+const hbs = exphbs.create({helpers})
 
 const routes = require('./controllers/');
 
